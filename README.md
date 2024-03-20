@@ -19,3 +19,11 @@ bun run android
 ```
 
 ローカルサーバーが起動しているときに、`r`キーを押すとホットリロードが使える。
+
+## 学習するときのGitとGithubのルール
+git-flow GithubFlowで開発をする。
+
+- mainブランチで作業しない.
+- developブランチを作成する.
+- developブランチから、feature/{issues番号}ブランチを作成して作成する.
+- featureブランチで作業が終わったら、developブランチにマージする.
