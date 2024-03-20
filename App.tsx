@@ -1,42 +1,26 @@
-import React from 'react';
-import {
-  StyleSheet,
-  Text,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-} from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
-const App = () => {
+export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.scrollView}>
-        <Text style={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Text>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
+    <View style={styles.container}>
+      <Text style={styles.text}>Hi icchysan!</Text>
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
+  // Viewに適用するスタイル
   container: {
     flex: 1,
-    paddingTop: StatusBar.currentHeight,
+    backgroundColor: "#bacbe8",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  scrollView: {
-    backgroundColor: 'pink',
-    marginHorizontal: 20,
-  },
+  // Textに適用するスタイル
   text: {
-    fontSize: 42,
+    color: "red",
+    fontSize: 20,
+    fontFamily: "Arial",
   },
 });
-
-export default App;
