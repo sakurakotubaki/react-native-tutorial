@@ -1,26 +1,31 @@
-import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useState } from 'react';
+import { Button, Text, View, StyleSheet } from 'react-native';
 
-export default function App() {
+const App = () => {
+  const [counter, setCounter] = useState(0);
+
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Hi icchysan!</Text>
+      <Text style={styles.text}>You have pushed the button this many times:</Text>
+      <Text style={styles.counter}>{counter}</Text>
+      <Button title="Increment" onPress={() => setCounter(counter + 1)} />
     </View>
-  )
-}
+  );
+};
 
 const styles = StyleSheet.create({
-  // Viewに適用するスタイル
   container: {
     flex: 1,
-    backgroundColor: "#bacbe8",
-    alignItems: "center",
-    justifyContent: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
   },
-  // Textに適用するスタイル
   text: {
-    color: "red",
-    fontSize: 20,
-    fontFamily: "Arial",
+    fontSize: 24,
+  },
+  counter: {
+    fontSize: 48,
+    margin: 20,
   },
 });
+
+export default App;
