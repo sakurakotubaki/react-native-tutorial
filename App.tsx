@@ -1,14 +1,10 @@
-import { Text, StyleSheet, SafeAreaView } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import Facebook from './facebook/Facebook';
+import Lesson from './facebook/ui_demock/Lesson';
 
-const App = () => {
-
+export default function App() {
   return (
     <SafeAreaProvider>
-      <Facebook />
+      <Lesson />
     </SafeAreaProvider>
   );
-};
-
-export default App;
+}
