@@ -1,10 +1,10 @@
-import GetAPI from "./components/GetAPI";
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Lesson from './facebook/ui_demock/Lesson';
 
-const App = () => {
-
+export default function App() {
   return (
-    <GetAPI />
+    <SafeAreaProvider>
+      <Lesson />
+    </SafeAreaProvider>
   );
-};
-
-export default App;
+}
