@@ -1,9 +1,13 @@
-import GetAPI from "./components/GetAPI";
+import { Text, StyleSheet, SafeAreaView } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Facebook from './facebook/Facebook';
 
 const App = () => {
 
   return (
-    <GetAPI />
+    <SafeAreaProvider>
+      <Facebook />
+    </SafeAreaProvider>
   );
 };
 
